@@ -36,5 +36,6 @@ for x in values:
 
 data = pd.DataFrame({'Date':values[0].getDataSeries()[0],'Index':values[0].getDataSeries()[1],'Fit1':values[0].getExpData(),'Fit2':values[1].getExpData(),'Fit3':values[2].getExpData()})
 data = data.set_index('Date')
+print(data.head())
 data.plot(figsize=(14,8))
 plt.show(block=True)
